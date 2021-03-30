@@ -11,7 +11,7 @@ export const getCharacters = async (characterName) => {
     };
 
     const response = await axios.get(
-      `${baseHost}/v1/public/characters?nameStartsWith=${characterName}&apikey=${secrets.marvelApiKey}`,
+      `${baseHost}/v1/public/characters?nameStartsWith=${characterName}&apikey=${secrets.marvelApiKey}&limit=10`,
       { headers },
     );
 

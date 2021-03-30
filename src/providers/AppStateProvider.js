@@ -9,20 +9,28 @@ const AppStateContext = createContext({});
 class AppStateProvider extends Component {
   state = {
     isLoading: false,
+    characterData: null,
   };
 
   setLoading = (value) => {
     this.setState({ isLoading: value });
   };
 
+  setCharacterData = (data) => {
+    this.setState({ characterData: data });
+  };
+
   getAppStateContext = () => {
     const {
       isLoading,
+      characterData
     } = this.state;
 
     return ({
       setLoading: this.setLoading,
+      setCharacterData: this.setCharacterData,
       isLoading,
+      characterData,
     });
   };
 

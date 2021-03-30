@@ -1,20 +1,27 @@
 import React from 'react';
-import { View, Text, Button, SafeAreaView, ImageBackground } from 'react-native';
 
-// const image = { uri: '../../assets/onboarding/captain-marvel-vector.jpg' };
+import Styled from './Onboarding.styles';
+
 const image = require('../../assets/onboarding/captain-marvel-vector.jpg');
 
-const OnboardingContainer = ({ navigation }) => {
-  return (
-    <SafeAreaView>
-      <ImageBackground source={image} style={{ width: '100%', height: '100%' }}>
-        <View style={{ flex: 1, backgroundColor: 'rgba(255, 255, 255, 0.25)', alignItems: 'center', justifyContent: 'center' }}>
-          <Text>ONBOARDING</Text>
-          <Button title="Continue" onPress={() => navigation.navigate('HeroSelection')}/>
-        </View>
-      </ImageBackground>
-    </SafeAreaView>
-  )
-}
+const OnboardingContainer = ({ navigation }) => (
+  <Styled.SafeAreaContainer>
+    <Styled.ImageBackground source={image}>
+      <Styled.Container>
+        <Styled.ContentWrapper>
+          <Styled.Text>
+            Welcome to MaKo, your companion for searching for your favorite Marvel hero's comic!
+          </Styled.Text>
+
+          <Styled.Text>
+            Click on "Next" and let's proceed our first time setup!
+          </Styled.Text>
+        </Styled.ContentWrapper>
+
+        <Styled.Button title="Next" onPress={() => navigation.navigate('HeroSelection')} />
+      </Styled.Container>
+    </Styled.ImageBackground>
+  </Styled.SafeAreaContainer>
+);
 
 export default OnboardingContainer;
