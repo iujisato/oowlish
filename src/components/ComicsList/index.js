@@ -1,20 +1,17 @@
 import React from 'react';
+import { SafeAreaView, Text } from 'react-native';
 
 import { compose } from '../../helpers/functionHelper';
 import { withAppStateConsumer } from '../../providers/AppStateProvider';
 
-import HeroSelectionForm from './HeroSelectionForm.native';
-
 const ComicsListContainer = (props) => {
   return (
     <SafeAreaView>
-      <View style={{ alignItems: 'center', justifyContent: 'center' }}>
-
-      </View>
+      <Text>Comics List!</Text>
     </SafeAreaView>
   )
 };
 
 export default compose(
   withAppStateConsumer,
-)(HeroSelectionContainer);
+)(ComicsListContainer);

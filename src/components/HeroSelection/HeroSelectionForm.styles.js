@@ -76,6 +76,14 @@ const CharacterDescriptionContainer = styled(CommonStyles.Container)`
   flex: 1;
 `;
 
+const TouchableOpacity = styled.TouchableOpacity``;
+
+const ItemLabel = styled(CommonStyles.Text)`
+  color: ${Colors.BLACK}
+  font-size: 16px;
+  line-height: 20px;
+`;
+
 export default {
   SafeAreaContainer,
   Container,
@@ -88,4 +96,6 @@ export default {
   Title,
   Image,
   CharacterDescriptionContainer,
+  TouchableOpacity,
+  ItemLabel,
 };
