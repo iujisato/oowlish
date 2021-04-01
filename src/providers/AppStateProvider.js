@@ -26,8 +26,6 @@ class AppStateProvider extends Component {
       characterData,
     } = this.state;
 
-    console.log('characterData?', characterData)
-
     return ({
       setLoading: this.setLoading,
       setCharacterData: this.setCharacterData,
