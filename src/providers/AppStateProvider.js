@@ -23,8 +23,10 @@ class AppStateProvider extends Component {
   getAppStateContext = () => {
     const {
       isLoading,
-      characterData
+      characterData,
     } = this.state;
+
+    console.log('characterData?', characterData)
 
     return ({
       setLoading: this.setLoading,
@@ -49,15 +51,15 @@ class AppStateProvider extends Component {
 
 const AppStateConsumer = AppStateContext.Consumer;
 
-export const withAppStateProvider = Child => (props) => (
+export const withAppStateProvider = (Child) => (props) => (
   <AppStateProvider>
     <Child {...props} />
   </AppStateProvider>
 );
 
-export const withAppStateConsumer = Child => (props) => (
+export const withAppStateConsumer = (Child) => (props) => (
   <AppStateConsumer>
-    {(context): ReactElement => (
+    {(context) => (
       <Child {...props} appStateContext={context} />
     )}
   </AppStateConsumer>

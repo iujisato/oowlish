@@ -1,6 +1,4 @@
 import React from 'react';
-import { View, Text, SafeAreaView, ImageBackground } from 'react-native';
-import { Formik } from 'formik';
 
 import { compose } from '../../helpers/functionHelper';
 import { withAppStateConsumer } from '../../providers/AppStateProvider';
@@ -10,7 +8,7 @@ import Styled from './HeroSelectionForm.styles';
 
 const image = require('../../assets/onboarding/pop-art-vector.jpg');
 
-const HeroSelectionContainer = (props) => (
+const HeroSelectionScene = (props) => (
   <Styled.SafeAreaContainer>
     <Styled.ImageBackground source={image}>
       <Styled.Container>
@@ -22,4 +20,4 @@ const HeroSelectionContainer = (props) => (
 
 export default compose(
   withAppStateConsumer,
-)(HeroSelectionContainer);
+)(HeroSelectionScene);

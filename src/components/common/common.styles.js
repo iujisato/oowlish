@@ -1,6 +1,6 @@
-import React from 'react';
 import styled from 'styled-components/native';
 import Button from './Button';
+import Link from './Link';
 import Colors from '../../utils/colors';
 
 const SafeAreaContainer = styled.SafeAreaView``;
@@ -32,6 +32,8 @@ const Image = styled.Image`
   height: 200px;
 `;
 
+const CustomLink = styled(Link)``;
+
 export default {
   SafeAreaContainer,
   Container,
@@ -39,4 +41,5 @@ export default {
   Text,
   Button: CustomButton,
   Image,
+  Link: CustomLink,
 };

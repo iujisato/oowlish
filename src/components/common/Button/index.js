@@ -1,6 +1,6 @@
 import React from 'react';
 
-import Styled from './button.styles';
+import Styled from './Button.styles';
 
 const ButtonContainer = (props) => {
   const { onPress, title } = props;
@@ -9,7 +9,7 @@ const ButtonContainer = (props) => {
     <Styled.TouchableOpacity onPress={onPress}>
       <Styled.Text>{title}</Styled.Text>
     </Styled.TouchableOpacity>
-  )
-}
+  );
+};
 
 export default ButtonContainer;

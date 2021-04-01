@@ -22,7 +22,7 @@ class HeroSelectionForm extends PureComponent {
       return null;
     }
 
-    const thumbnail = get(values, 'characterData.thumbnail', {})
+    const thumbnail = get(values, 'characterData.thumbnail', {});
     const uri = `${thumbnail.path}.${thumbnail.extension}`.replace('http://', 'https://');
     const description = get(values, 'characterData.description');
 
@@ -35,8 +35,17 @@ class HeroSelectionForm extends PureComponent {
   };
 
   render() {
-    const { formikProps, onChangeText, hideList, charactersData  } = this.props;
-    const { handleChange, handleBlur, values, handleSubmit } = formikProps;
+    const {
+      formikProps,
+      onChangeText,
+      hideList,
+      charactersData,
+    } = this.props;
+    const {
+      handleBlur,
+      values,
+      handleSubmit,
+    } = formikProps;
 
     return (
       <Fragment>
@@ -48,7 +57,7 @@ class HeroSelectionForm extends PureComponent {
             value={values.characterName}
             data={charactersData}
             renderItem={(item) => this.renderAutoCompleteItem(item)}
-            placeholder='Enter your favorite character name!'
+            placeholder="Enter your favorite character name!"
             keyExtractor={(item) => item.id}
             hideResults={hideList}
             renderTextInput={(props) => (<Styled.TextInput {...props} />)}
@@ -59,7 +68,7 @@ class HeroSelectionForm extends PureComponent {
 
         <Styled.Button onPress={handleSubmit} title="Next" />
       </Fragment>
-    )
+    );
   }
 }
 

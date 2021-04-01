@@ -7,12 +7,12 @@ import { getCharacters } from '../../services/MarvelApiService';
 import HeroSelectionForm from './HeroSelectionForm.native';
 
 class HeroSelectionFormContainer extends PureComponent {
- constructor(props) {
+  constructor(props) {
     super(props);
     this.state = {
       charactersData: [],
       hideList: false,
-    }
+    };
     this.setCharactersName = debounce(this.setCharactersName, 750);
   }
 
@@ -25,11 +25,12 @@ class HeroSelectionFormContainer extends PureComponent {
       const response = await getCharacters(characterName);
 
       this.setState({
-        charactersData: response.data.results.map(result => ({
+        charactersData: response.data.results.map((result) => ({
           id: result.id,
           name: result.name,
           description: result.description,
           thumbnail: result.thumbnail,
+          comics: result.comics.available,
         })),
       });
     } catch (error) {

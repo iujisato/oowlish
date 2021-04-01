@@ -1,17 +1,12 @@
 import React from 'react';
-import { SafeAreaView, Text } from 'react-native';
 
-import { compose } from '../../helpers/functionHelper';
-import { withAppStateConsumer } from '../../providers/AppStateProvider';
+import Styled from './ComicsList.styles';
+import ComicsListContainer from './ComicsList.container';
 
-const ComicsListContainer = (props) => {
-  return (
-    <SafeAreaView>
-      <Text>Comics List!</Text>
-    </SafeAreaView>
-  )
-};
+const ComicsListScene = () => (
+  <Styled.SafeAreaContainer>
+    <ComicsListContainer />
+  </Styled.SafeAreaContainer>
+);
 
-export default compose(
-  withAppStateConsumer,
-)(ComicsListContainer);
+export default ComicsListScene;

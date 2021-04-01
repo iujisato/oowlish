@@ -1,11 +1,11 @@
 import styled from 'styled-components/native';
 import AutoComplete from 'react-native-autocomplete-input';
-import{ Dimensions } from 'react-native';
+import { Dimensions } from 'react-native';
 
 import CommonStyles from '../common/common.styles';
 import Colors from '../../utils/colors';
 
-const { width, height } = Dimensions.get('window');
+const { width } = Dimensions.get('window');
 
 const SafeAreaContainer = styled(CommonStyles.SafeAreaContainer)``;
 
@@ -43,8 +43,8 @@ const CustomAutoComplete = styled(AutoComplete).attrs({
     borderWidth: 0,
   },
   listStyle: {
-   backgroundColor: 'rgba(255, 255, 255, 0.95)',
-   borderWidth: 0,
+    backgroundColor: 'rgba(255, 255, 255, 0.95)',
+    borderWidth: 0,
   },
 })``;
 
